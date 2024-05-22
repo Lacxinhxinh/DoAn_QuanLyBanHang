@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8298987A-BC19-414F-A3E9-132B52335FB3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DoAn_QuanLyBanHang</RootNamespace>
+    <AssemblyName>DoAn_QuanLyBanHang</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BEAN\ChiTietHoaDon.cs" />
+    <Compile Include="BEAN\HoaDon.cs" />
+    <Compile Include="BEAN\LoaiHang.cs" />
+    <Compile Include="BEAN\NhanVien.cs" />
+    <Compile Include="BEAN\SanPham.cs" />
+    <Compile Include="BEAN\TaiKhoan.cs" />
+    <Compile Include="BO\ChiTietHoaDonBO.cs" />
+    <Compile Include="BO\HoaDonBO.cs" />
+    <Compile Include="BO\LichSuBO.cs" />
+    <Compile Include="BO\LoaiHangBO.cs" />
+    <Compile Include="BO\NhanVienBO.cs" />
+    <Compile Include="BO\SanPhamBO.cs" />
+    <Compile Include="BO\TaiKhoanBo.cs" />
+    <Compile Include="DAO\ChiTietHoaDonDAO.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
+    <Compile Include="DAO\KetNoi.cs" />
+    <Compile Include="DAO\LoaiHangDAO.cs" />
+    <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\SanPhamDAO.cs" />
+    <Compile Include="DAO\TaiKhoanDAO.cs" />
+    <Compile Include="FormChiTietHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChiTietHD.Designer.cs">
+      <DependentUpon>FormChiTietHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormcuaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormcuaNhanVien.Designer.cs">
+      <DependentUpon>FormcuaNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangKy.Designer.cs">
+      <DependentUpon>FormDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHoaDonNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHoaDonNhanVien.Designer.cs">
+      <DependentUpon>FormHoaDonNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHoaDonNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHoaDonNV.Designer.cs">
+      <DependentUpon>FormHoaDonNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLyHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLyHoaDon.Designer.cs">
+      <DependentUpon>FormQuanLyHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSanPham.Designer.cs">
+      <DependentUpon>FormSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThongke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongke.Designer.cs">
+      <DependentUpon>FormThongke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNhanVien.Designer.cs">
+      <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QL_BanHang_DienTuDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QL_BanHang_DienTuDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QL_BanHang_DienTuDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QL_BanHang_DienTuDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QL_BanHang_DienTuDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QL_BanHang_DienTuDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QL_BanHang_DienTuDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QL_BanHang_DienTuDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QL_BanHang_DienTuDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QL_BanHang_DienTuDataSet4.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormChiTietHD.resx">
+      <DependentUpon>FormChiTietHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormcuaNhanVien.resx">
+      <DependentUpon>FormcuaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangKy.resx">
+      <DependentUpon>FormDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHoaDonNhanVien.resx">
+      <DependentUpon>FormHoaDonNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHoaDonNV.resx">
+      <DependentUpon>FormHoaDonNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLyHoaDon.resx">
+      <DependentUpon>FormQuanLyHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSanPham.resx">
+      <DependentUpon>FormSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongke.resx">
+      <DependentUpon>FormThongke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNhanVien.resx">
+      <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\DoAn_QuanLyBanHang.BEAN.NhanVien.datasource" />
+    <None Include="Properties\DataSources\DoAn_QuanLyBanHang.BEAN.SanPham.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QL_BanHang_DienTuDataSet.xsc">
+      <DependentUpon>QL_BanHang_DienTuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QL_BanHang_DienTuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QL_BanHang_DienTuDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QL_BanHang_DienTuDataSet.xss">
+      <DependentUpon>QL_BanHang_DienTuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QL_BanHang_DienTuDataSet1.xsc">
+      <DependentUpon>QL_BanHang_DienTuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QL_BanHang_DienTuDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QL_BanHang_DienTuDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QL_BanHang_DienTuDataSet1.xss">
+      <DependentUpon>QL_BanHang_DienTuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QL_BanHang_DienTuDataSet2.xsc">
+      <DependentUpon>QL_BanHang_DienTuDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QL_BanHang_DienTuDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QL_BanHang_DienTuDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QL_BanHang_DienTuDataSet2.xss">
+      <DependentUpon>QL_BanHang_DienTuDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QL_BanHang_DienTuDataSet3.xsc">
+      <DependentUpon>QL_BanHang_DienTuDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QL_BanHang_DienTuDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QL_BanHang_DienTuDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QL_BanHang_DienTuDataSet3.xss">
+      <DependentUpon>QL_BanHang_DienTuDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QL_BanHang_DienTuDataSet4.xsc">
+      <DependentUpon>QL_BanHang_DienTuDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QL_BanHang_DienTuDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QL_BanHang_DienTuDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QL_BanHang_DienTuDataSet4.xss">
+      <DependentUpon>QL_BanHang_DienTuDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\laptop-store-logo-design-template-b8cb62247e5e2338cd49c7961aa59c08_screen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attachment_144613571.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snapedit_1703997212976.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attachment_144613571_preview_rev_1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
